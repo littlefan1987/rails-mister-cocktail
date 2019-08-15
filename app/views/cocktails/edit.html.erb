@@ -1,0 +1,15 @@
+<div class="container margin">
+  <div class="row">
+    <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+    <div class="card-lg">
+        <div class="card-description">
+          <h1>Edit <%= @cocktail.name %></h1>
+        </div>
+        <%= link_to @cocktail, class: 'card-user white' do %> <i class="fa fa-search"></i> View cocktail <% end %>
+      </div>
+    <br>
+    <%= render 'form', cocktail: @cocktail %>
+    <%= link_to 'Back', cocktails_path, class: 'btn btn-default' %>
+    </div>
+  </div>
+</div>

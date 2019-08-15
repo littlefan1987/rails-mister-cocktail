@@ -1,0 +1,34 @@
+<div class="container margin">
+  <div class="row">
+    <div class="col-xs-12 col-sm-12">
+          <div class="d-flex flex-row">
+            <div class="p-2">
+              <h1><%= @cocktail.name %></h1>
+            </div>
+            <div>
+              <%= link_to edit_cocktail_path(@cocktail), class: 'card-user white' do %> <i class="fa fa-edit"></i><% end %>
+            </div>
+          </div>
+          <div class="d-flex flex-row">
+            <div class="card-image" style="background-image: url(https://images.unsplash.com/photo-1527271982979-83fea3eb3582?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=752&q=80)">
+            </div>
+          </div>
+  <h3 id="top">How to make it?</h3>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-12 col-sm-6">
+      <%= @cocktail.description %>
+    </div>
+    <div class="col-xs-12 col-sm-6">
+      <div class="ingredients-flex">
+      <% @cocktail.doses.each do |dose| %>
+        <div class="ingredient-flex text-center">
+          <br><%=dose.description %> <%=dose.ingredient.name %> <br><%= link_to cocktail_dose_path(@cocktail, dose), method: :delete do %> <i class="fa fa-trash"></i> <% end %></div>
+      <% end %>
+      </div>
+    <div class="text-center"><br><%= link_to new_cocktail_dose_path(@cocktail), class: 'btn btn-default' do %> <i class="fa fa-flask"></i> Add a dose <% end %></div>
+    </div>
+  </div>
+</div>
+

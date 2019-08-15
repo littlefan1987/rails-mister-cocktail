@@ -1,0 +1,14 @@
+<div class="container margin">
+  <div class="row">
+    <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+      <div class="page-header">
+      <h2 id="top">Add a new cocktail</h2>
+      </div>
+    </div>
+  <div class="row">
+    <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+    <%= render 'form', cocktail: @cocktail %>
+    <%= link_to 'Back', cocktails_path, class: 'btn btn-default'%>
+    </div>
+  </div>
+</div>

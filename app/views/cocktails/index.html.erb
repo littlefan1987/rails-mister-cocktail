@@ -1,0 +1,34 @@
+<div class="container mt-3">
+  <h1 id="top">Choose your potion</h1>
+  <br>
+  <div class="cards">
+    <% @cocktails.each do |cocktail| %>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <div class="card-category" style="background-image: url(https://images.unsplash.com/photo-1527271982979-83fea3eb3582?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=752&q=80)">
+            </div>
+          </div>
+          <div class="flip-card-back">
+            <h2><%= cocktail.name %></h2>
+            <% cocktail.doses.each do |dose| %>
+              <p><%=dose.ingredient.name %></p>
+            <% end %>
+            <%= link_to cocktail do %>
+              <i class="fa fa-eye" aria-hidden="true"></i>
+            <% end %>
+            <%= link_to edit_cocktail_path(cocktail), class: 'card-link2 white' do %>
+              <i class="fa fa-edit"></i>
+            <% end %>
+            <%= link_to cocktail, method: :delete, data: { confirm: 'Are you sure?' }, class: 'card-link1 white' do %>
+              <i class="fa fa-trash"></i>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+
+
