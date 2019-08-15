@@ -1,0 +1,34 @@
+$oldrose: #825150;
+$white: #F5F5F5;
+$light: #E0C9CB;
+$tan: #C3A1A0;
+$pink: #D9AAB7;
+$rose: #BA7E7E;
+$dark: #4E4E4E;
+
+.btn-navbar {
+  color: white;
+  padding: 8px 24px;
+  border-radius: 50px;
+  background-image: linear-gradient(to right, #DD5E89 0%, #F7BB97 51%, #DD5E89 100%);
+  transition: background 0.3s ease;
+  display: inline;
+}
+
+.btn-navbar:hover {
+  color: #ce625f;
+  text-decoration: none;
+  background-position: right center;
+}
+
+button {
+  color: #c84e4b;
+  border: 1px solid #c84e4b;
+  padding: 8px 24px;
+  border-radius: 50px;
+  font-weight: lighter;
+  font-size: 10px;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+  letter-spacing: 1px;
+}
