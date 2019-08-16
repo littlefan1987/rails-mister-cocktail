@@ -42,7 +42,7 @@ a:hover {
 }
 
 .card-cocktail {
-  margin-top: 100px;
+  margin: 100px auto;
   position: relative;
   width: 520px;
   height: 350px;
@@ -55,6 +55,7 @@ a:hover {
 .card-cocktail img {
   height: 100%;
   width: 50%;
+  border-radius: 10px 0px 0px 10px;
   object-fit: cover;
 }
 
@@ -64,17 +65,14 @@ a:hover {
   height: 100%;
   top: 10%;
   left: 60%;
+  display: block;
 }
 
 .desc {
-  text-transform: none;
-  letter-spacing: 0;
   margin-bottom: 17px;
   color: $dark;
-  font-size: .7em;
-  line-height: 1.6em;
+  font-size: 0.8em;
   margin-right: 25px;
-  text-align: justify;
 }
 
 .pick {
